@@ -1,0 +1,43 @@
+/**index.wxss**/
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #aaa;
+}
+
+.userinfo-avatar {
+  overflow: hidden;
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+.rong-view{
+  padding: 0 5px;
+}
+.user{
+  position: relative;
+  border: 1px solid black;
+  margin-bottom: 5px;
+  background: black;
+  color: #ffffff;
+}
+.rong-user-name{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  padding: 5px;
+}
+.rong-user-top{
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+.sub{
+  width: auto !important;
+}

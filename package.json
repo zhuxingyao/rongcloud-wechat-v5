@@ -1,0 +1,17 @@
+{
+  "name": "wechat",
+  "version": "1.0.0",
+  "description": "",
+  "main": ".eslintrc.js",
+  "dependencies": {
+    "@rongcloud/engine": "^5.4.4-alpha",
+    "@rongcloud/imlib-next": "^5.4.4-alpha",
+    "@rongcloud/plugin-wechat-rtc": "^5.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

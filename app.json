@@ -1,0 +1,13 @@
+{
+  "pages":[
+    "pages/index/index"
+  ],
+  "window":{
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "RongCloud RTC",
+    "navigationBarTextStyle": "black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,45 @@
+<!--index.wxml-->
+<view class="rong-container">
+  <view class="rong-input-list">
+    <input class="rong-input" value="{{appkey}}" type="text" placeholder="输入appkey"/>
+    <input class="rong-input" value="{{token}}" type="text" placeholder="输入token"/>
+    <input class="rong-input" value="{{roomId}}" type="text" placeholder="输入房间号"/>
+  </view>
+  <view class="rong-button-list">
+    <button class="rong-button" bindtap="init">初始化</button>
+    <button class="rong-button" bindtap="connect">连接</button>
+    <button class="rong-button" bindtap="joinRoom">加入房间</button>
+  </view>
+  <view class="rong-button-list">
+    <button class="rong-button" bindtap="registerRoomEventListener">设置监听</button>
+    <button class="rong-button" bindtap="publishStream">发布资源</button>
+    <button class="rong-button" bindtap="unpublishStream">取消发布</button>
+  </view>
+  <view class="rong-button-list">
+    <button class="rong-button" bindtap="getRemoteStreams">资源列表</button>
+    <button class="rong-button" bindtap="getRemoteUserIds">用户列表</button>
+    <button class="rong-button" bindtap="leaveRoom">离开房间</button>
+  </view>
+  <view class="rong-view">
+    <view class="user">
+      <rc-livepusher></rc-livepusher>
+      <view class="rong-user-name">
+        <text>自己</text>
+        <view style="margin-bottom: 5px;">打开摄像头<switch style="margin: 0 5px;" bindchange="toggleCamera"/>关闭摄像头</view>
+        <view>打开麦克风<switch style="margin: 0 5px;" bindchange="toggleMicphone"/>关闭麦克风</view>
+      </view>
+    </view>
+    <view class="user" wx:for="{{remoteStreams}}" wx:key="msid">
+      <rc-liveplayer style="height:150px" id="{{item.msid}}"></rc-liveplayer>
+      <view class="rong-user-name">
+        <view class="rong-user-top">
+          <text>{{item.msid}}</text>
+          <button class="rong-button sub" data-id="{{item.msid}}" bindtap="subscribe">订阅</button>
+          <button class="rong-button sub" data-id="{{item.msid}}" bindtap="unsubscribe">取消订阅</button>
+        </view>
+        <view style="margin-bottom: 5px;">取消静音<switch data-id="{{item.msid}}" style="margin: 0 5px;" bindchange="toggleMute"/>静音</view>
+        <view>扬声器输出<switch data-id="{{item.msid}}" style="margin: 0 5px;" bindchange="setAudioOutputDevice"/>听筒输出</view>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "rc-livepusher": "../../rcComponents/rc-livepusher",
+    "rc-liveplayer": "../../rcComponents/rc-liveplayer"
+  }
+}
